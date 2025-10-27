@@ -137,3 +137,18 @@ if __name__ == "__main__":
     print("Alice ->", table.search("Alice"))
     
     table.print_table()
+
+
+
+# Design Memo — Contact Hash Table
+
+# This assignment implements a simple contact management structure using a
+# hash table with separate chaining. Each bucket stores a singly linked list
+# of Node(key, value) pairs where the key is the contact’s name and the value
+# is a phone string. The hash function sums character codes of the string key 
+# and modifies by table size, producing an index. Core operations are 
+# insert(key, value) and search(key). Insert computes the index, traverses the 
+# chain to update an existing key or appends a new node; search walks the chain 
+# to return the matched value or None.
+# I added a print function to visualize the contacts for debugging. Testing focuses
+# on collisions, updates, and lookups for missing keys.
